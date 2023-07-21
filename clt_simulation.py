@@ -68,12 +68,12 @@ At this section, random numbers are taken from population and we count the mean 
 
 # Make a dummy dataframe
 av = pd.DataFrame()
-# Number of iterations
+# Here number of iterations is set
 num_iterations = 5000
 
 # Loop to calculate the averages
 for i in range(num_iterations):
-    random_sample = df.sample(n=500)
+    random_sample = df.sample(n=500) # n is number of sample taken to draw mean
     #print(random_sample)
     average = random_sample['Random Numbers'].mean()
     av = av.append({'Average': average}, ignore_index=True)
