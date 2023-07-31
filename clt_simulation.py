@@ -73,7 +73,7 @@ num_iterations = 5000
 
 # Loop to calculate the averages
 for i in range(num_iterations):
-    random_sample = df.sample(n=500) # n is number of sample taken to draw mean
+    random_sample = df.sample(n=500,replace=True) # n is number of sample taken to draw mean
     #print(random_sample)
     average = random_sample['Random Numbers'].mean()
     av = av.append({'Average': average}, ignore_index=True)
